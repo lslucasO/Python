@@ -1,4 +1,4 @@
-import discord, key, random, os, asyncio
+import discord, random, os, asyncio
 from ossapi import Ossapi, UserLookupKey, GameMode, RankingType
 
 from discord import app_commands

@@ -1,4 +1,4 @@
-import discord, key, random, os, asyncio
+import discord, random, os, asyncio
 from ossapi import Ossapi, UserLookupKey, GameMode, RankingType
 
 from discord import app_commands
@@ -9,7 +9,7 @@ intents.message_content = True # <-- Intents basicos
 client = commands.Bot(command_prefix='+', intents=discord.Intents.all())
 
 
-DISCORD_API_KEY = key.token # <-- Key do bot
+DISCORD_API_KEY = 'MTA5NTA5ODE3Mzc1MzY3NTg3OQ.G0TqDK.wj1DRqHSSzfQBzxMnVXNvlik6IRp3SL3hUjVWQ' # <-- Key do bot
 
 @client.event
 async def on_ready():
@@ -18,8 +18,8 @@ async def on_ready():
 
 
 
-async def load():
-    for filename in os.listdir('discordbot/cogs'):
+async def load():   
+    for filename in os.listdir('D:/Estudos VSCODE/python/discordbot/cogs'):
         if filename.endswith('.py'):
             await client.load_extension(f'cogs.{filename[:-3]}')
             print(f'{filename} is ready!')
@@ -31,6 +31,4 @@ async def main():
         await client.start(DISCORD_API_KEY)
 
 
-asyncio.run(main())
-
-
+asyncio.run(main()) 
